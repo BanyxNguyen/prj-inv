@@ -5,11 +5,11 @@ import HomeComponent from "./home/HomeComponent";
 
 const App: FC = () => {
   return (
-    <>
+    <div className="container-app">
       <HeaderComponent />
       <HomeComponent />
       <FooterComponent />
-    </>
+    </div>
   );
 };
 

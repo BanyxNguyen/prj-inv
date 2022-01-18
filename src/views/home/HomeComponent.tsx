@@ -1,10 +1,11 @@
 import React, { FC } from "react";
+import WelcomeComponent from "./WelcomeComponent";
 
 const HomeComponent: FC = () => {
   return (
-    <section>
-      HOME
-    </section>
+    <div className="home">
+      <WelcomeComponent/>
+    </div>
   );
 };
 

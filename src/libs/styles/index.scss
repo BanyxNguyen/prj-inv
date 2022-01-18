@@ -1,4 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+
+@import './general/fonts';
+@import './variables/_color';
+@import './variables/size';
+
+@import './general/fixHTML';
+@import './general/_common';
+
+@import './views/_header';
+@import './views/footer';
+@import './views/home';

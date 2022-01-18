@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $cl-white;
+  background-color: $cl-black;
+  font-family: MerriweatherSansLight;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container-app{
+  background: $cl-bg;
+}
