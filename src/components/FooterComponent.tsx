@@ -1,62 +1,49 @@
 import React, { FC } from "react";
-import { NAV_LIST } from "./HeaderComponent";
-import {
-  LocalPhone,
-  Email,
-  Facebook,
-  Twitter,
-  Telegram,
-  YouTube,
-} from "@mui/icons-material";
+import { Facebook, Twitter, YouTube } from "@mui/icons-material";
 
-const SOCIAL_LIST = [Facebook, Twitter, Telegram, YouTube];
+const SOCIAL_LIST = [Facebook, Twitter, YouTube];
 
 const FooterComponent: FC = () => {
   return (
     <footer className="footer">
-      <div className="content-footer">
-        <div className="item">
-          <div className="logo">LOGO</div>
-          <ul className="contact">
-            <li>
-              <span className="icon">
-                <LocalPhone sx={{ fontSize: 20 }} />
-              </span>
-              <span className="text">+84909999909</span>
-            </li>
-            <li>
-              <span className="icon">
-                <Email sx={{ fontSize: 20 }} />
-              </span>
-              <span className="text">example@gmail.com</span>
-            </li>
-          </ul>
-        </div>
-        <div className="item">
-          <ul className="nav-footer">
-            {NAV_LIST.map((item, index) => (
-              <li key={index} className="nav-item">
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="item">
-          <h2>Sign up receive message</h2>
-          <div>Keep track of the latest projects from Titans Ventures</div>
-          <div></div>
+      <div
+        className="content-footer bg-footer"
+        style={{
+          backgroundImage: "url(/images/bg-footer.png)",
+        }}
+      >
+        <div className="item logo-item">
+          <div className="logo">
+            <img
+              src={process.env.PUBLIC_URL + "/images/inv-logo.png"}
+              alt="inv-logo"
+            />
+          </div>
           <ul className="social">
             {SOCIAL_LIST.map((Item, index) => {
               return (
                 <li key={index}>
-                  <Item />
+                  <Item sx={{ fontSize: 26 }} />
                 </li>
               );
             })}
           </ul>
         </div>
+        <div className="item">
+          <ul className="nav-footer">
+            <li className="nav-item">Home</li>
+            <li className="nav-item">About Us</li>
+            <li className="nav-item">Visions</li>
+          </ul>
+        </div>
+        <div className="item">
+          <ul className="nav-footer">
+            <li className="nav-item">Partnership</li>
+            <li className="nav-item">Portfolio</li>
+            <li className="nav-item">Contact</li>
+          </ul>
+        </div>
       </div>
-      <div className="copyright">@2022 INV. Copyright by INV.</div>
     </footer>
   );
 };
