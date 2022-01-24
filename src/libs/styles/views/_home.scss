@@ -21,7 +21,7 @@ $h-title: 45px;
 }
 
 .section-item {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   .bg-img {
     height: 100%;

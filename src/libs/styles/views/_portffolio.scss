@@ -1,0 +1,25 @@
+.portfolio{
+  background-image: url(../../../../public/images/portfolio_bg.png);
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.portfolioList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  position: relative;
+  justify-content: center;
+  margin: 100px;
+  grid-gap: 50px;
+}
+
+.logo_portfolio {
+  max-height: 100%;
+  max-width: 90%;
+}
+
+.logo_portfolio_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
