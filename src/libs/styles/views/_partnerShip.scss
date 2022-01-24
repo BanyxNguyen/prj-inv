@@ -1,0 +1,31 @@
+.partnerList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  padding-inline: 65px;
+  margin-top: 100px;
+}
+
+.logo_partner {
+  position: relative;
+  margin-top: 50px;
+}
+
+.partnerBg {
+  // margin-top: -100px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+} 
+
+.partnerLg {
+  object-fit: contain;
+  margin: auto;
+  position: absolute;
+  max-height: 39%;
+  max-width: 50%;
+  top: 50%;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
