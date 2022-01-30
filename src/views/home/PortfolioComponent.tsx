@@ -1,9 +1,9 @@
-import React,
-{ FC } from "react";
-import PartnerShip from "../../components/PartnerShip";
+import { useMediaQuery, useTheme } from "@mui/material";
+import React, { FC } from "react";
 
 const PortfolioComponent: FC = () => {
-
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const listUrlLogo = [
     "1.png",
     "2.png",
@@ -24,32 +24,39 @@ const PortfolioComponent: FC = () => {
     "17.png",
     "18.png",
     "19.png",
-    "20.png",]
+    "20.png",
+  ];
 
   const renderLogo = () => {
-    return listUrlLogo.map((data) => {
+    return listUrlLogo.map((item, index) => {
       return (
-        <div className="logo_portfolio_area" style={{ width: '100%' }}>
-          <img className="logo_portfolio" src={process.env.PUBLIC_URL + "/images/" + data} alt='logo' />
-        </div>)
-    })
-  }
+        <div
+          key={index}
+          className="logo_portfolio_area"
+          style={{ width: "100%" }}
+        >
+          <img
+            className="logo_portfolio"
+            src={process.env.PUBLIC_URL + "/images/" + item}
+            alt="logo"
+          />
+        </div>
+      );
+    });
+  };
+  const temp = isMobile ? " md" : "";
 
   return (
-    <section className="section-item portfolio" style={{ textAlign: "center" }}>
-      {/* <img
-        className="bg-img"
-        src={process.env.PUBLIC_URL + "/images/inv-circle.png"}
-        alt="inv-circle"
-      /> */}
+    <section
+      className={"section-item portfolio" + temp}
+      style={{ textAlign: "center" }}
+    >
       <img
         className="img-title"
         src={process.env.PUBLIC_URL + "/images/PORTFOLIO.png"}
         alt="about-us"
       />
-      <div className="portfolioList">
-        {renderLogo()}
-      </div>
+      <div className="portfolioList">{renderLogo()}</div>
     </section>
   );
 };

@@ -1,4 +1,4 @@
-.portfolio{
+.portfolio {
   background-image: url(../../../../public/images/portfolio_bg.png);
   background-size: cover !important;
   background-position: center !important;
@@ -6,7 +6,7 @@
 }
 .portfolioList {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   position: relative;
   justify-content: center;
   margin: 100px;
@@ -22,4 +22,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-item.md {
+  .portfolioList {
+    display: block;
+    margin: 30px 35px;
+  }
+  .logo_portfolio_area{
+    margin-bottom: 25px;
+  }
 }

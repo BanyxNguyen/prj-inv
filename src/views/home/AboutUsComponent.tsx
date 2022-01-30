@@ -1,8 +1,12 @@
+import { useMediaQuery, useTheme } from "@mui/material";
 import React, { FC } from "react";
 
 const AboutUsComponent: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const temp = isMobile ? " md" : "";
   return (
-    <section className="section-item">
+    <section className={"section-item" + temp}>
       <img
         className="bg-img"
         src={process.env.PUBLIC_URL + "/images/inv-circle.png"}

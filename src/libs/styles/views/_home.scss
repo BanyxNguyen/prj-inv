@@ -16,7 +16,28 @@ $h-title: 45px;
     width: 55%;
   }
   .sub-title {
-    font-size: 30px;
+    .text {
+      font-size: 30px;
+      text-align: justify;
+    }
+  }
+  &.md {
+    height: unset;
+    display: block;
+    padding-top: 100px;
+    .wel-content {
+      height: unset;
+    }
+    .wel-img {
+      margin-bottom: -25px;
+    }
+    .sub-title {
+      padding: 0 5px;
+      margin-top: 10px;
+      .text {
+        font-size: 26px;
+      }
+    }
   }
 }
 
@@ -43,18 +64,56 @@ $h-title: 45px;
     text-align: center;
     font-size: 26px;
   }
-  &.vision{
+  &.vision {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    .bg-img{
+    .bg-img {
       height: 90%;
     }
-    .content{
+    .content {
       right: 45%;
       left: 0;
       padding-right: unset;
       padding-left: 65px;
+    }
+    &.md {
+      margin-top: -5px;
+      margin-bottom: 30px;
+      .bg-img {
+        width: 100%;
+        opacity: 0.2;
+        z-index: unset;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &.md {
+    min-height: unset;
+    margin-top: 60px;
+    margin-bottom: -30px;
+    .bg-img {
+      height: unset;
+      width: 230%;
+      opacity: 0.2;
+      margin-top: -50px;
+      z-index: -1;
+    }
+    .content {
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: unset;
+      padding: 0 15px;
+    }
+    .img-title {
+      height: 25px;
+      margin: 20px 0;
+    }
+    .text {
+      text-align: justify;
+      font-size: 20px;
     }
   }
 }

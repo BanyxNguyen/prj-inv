@@ -1,8 +1,12 @@
+import { useMediaQuery, useTheme } from "@mui/material";
 import React, { FC } from "react";
 
 const VisionComponent: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const temp = isMobile ? " md" : "";
   return (
-    <section className="section-item vision">
+    <section className={"section-item vision" + temp}>
       <img
         className="bg-img"
         src={process.env.PUBLIC_URL + "/images/bg-visions.png"}

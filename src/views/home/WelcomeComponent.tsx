@@ -1,8 +1,12 @@
+import { useMediaQuery, useTheme } from "@mui/material";
 import React, { FC } from "react";
 
 const WelcomeComponent: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const temp = isMobile ? " md" : "";
   return (
-    <section className="welcome">
+    <section className={"welcome" + temp}>
       <div className="wel-content">
         <img
           className="wel-img"
@@ -16,7 +20,9 @@ const WelcomeComponent: FC = () => {
             alt="inv-ventures"
           />
         </div>
-        <span className="sub-title">Here today, looked upon tomorrow!</span>
+        <div className="sub-title">
+          <span className="text">Here today, looked upon tomorrow!</span>
+        </div>
       </div>
     </section>
   );

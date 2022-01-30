@@ -1,11 +1,16 @@
 import React, { FC } from "react";
 import { Facebook, Twitter, YouTube } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/system";
 
 const SOCIAL_LIST = [Facebook, Twitter, YouTube];
 
 const FooterComponent: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const temp = isMobile ? " md" : "";
   return (
-    <footer className="footer">
+    <footer className={"footer" + temp}>
       <div
         className="content-footer bg-footer"
         style={{
@@ -30,7 +35,7 @@ const FooterComponent: FC = () => {
           </ul>
         </div>
         <div className="item">
-          <ul className="nav-footer">
+          <ul className="nav-footer bd-bottom">
             <li className="nav-item">Home</li>
             <li className="nav-item">About Us</li>
             <li className="nav-item">Visions</li>
