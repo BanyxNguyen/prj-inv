@@ -10,17 +10,8 @@
     .content-footer {
       display: block;
       padding: 35px 20px;
-      .nav-footer {
-        &.bd-bottom {
-          border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
-        }
-        .nav-item {
-          text-align: center;
-          border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
-          &:first-child {
-            border: unset;
-          }
-        }
+      .menu-item {
+        display: none;
       }
     }
     .logo-item {

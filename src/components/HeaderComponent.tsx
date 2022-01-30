@@ -8,20 +8,21 @@ export const NAV_LIST = [
   "Visions",
   "Partnership",
   "Portfolio",
+  "Social",
   "Contact",
 ];
 
 const HeaderComponent: FC = () => {
-  const [isHidden, setIsHidden] = useState(false);
+  const [isBg, setIsBg] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleUIEvent = (e: any) => {
     let t = window.pageYOffset;
     if (t <= 0) {
-      setIsHidden(false);
-    } else if (!isHidden) {
-      setIsHidden(true);
+      setIsBg(false);
+    } else if (!isBg) {
+      setIsBg(true);
     }
   };
 
@@ -42,7 +43,7 @@ const HeaderComponent: FC = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleUIEvent);
   }, []);
-  const temp = isHidden ? " hidden" : "";
+  const temp = isBg ? " show-bg" : "";
   const clsMobile = isMobile ? " rp-md" : "";
   return (
     <header className={"header" + clsMobile + temp}>
@@ -71,6 +72,12 @@ const DrawerMenu: FC = () => {
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
       >
+        <div className="logo">
+          <img
+            src={process.env.PUBLIC_URL + "/images/inv-logo.png"}
+            alt="inv-logo"
+          />
+        </div>
         <ul className="nav">
           {NAV_LIST.map((item, index) => (
             <li key={index} className="nav-item">
@@ -78,12 +85,6 @@ const DrawerMenu: FC = () => {
             </li>
           ))}
         </ul>
-        <div className="logo">
-          <img
-            src={process.env.PUBLIC_URL + "/images/inv-logo.png"}
-            alt="inv-logo"
-          />
-        </div>
       </Drawer>
       <IconButton
         className={"menu-icon" + temp}

@@ -8,7 +8,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   position: relative;
-  justify-content: center;
   margin: 100px;
   grid-gap: 50px;
 }
@@ -26,10 +25,16 @@
 
 .section-item.md {
   .portfolioList {
-    display: block;
+    grid-template-columns: 1fr 1fr;
     margin: 30px 35px;
+    grid-gap: 10px;
   }
-  .logo_portfolio_area{
-    margin-bottom: 25px;
+  .logo_portfolio_area {
+    padding: 10px 10px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, transparent, #0279ad);
+    background: #010e21;
   }
 }

@@ -34,14 +34,14 @@ const FooterComponent: FC = () => {
             })}
           </ul>
         </div>
-        <div className="item">
+        <div className="item menu-item">
           <ul className="nav-footer bd-bottom">
             <li className="nav-item">Home</li>
             <li className="nav-item">About Us</li>
             <li className="nav-item">Visions</li>
           </ul>
         </div>
-        <div className="item">
+        <div className="item menu-item">
           <ul className="nav-footer">
             <li className="nav-item">Partnership</li>
             <li className="nav-item">Portfolio</li>

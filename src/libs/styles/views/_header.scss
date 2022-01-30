@@ -9,9 +9,12 @@
   left: 0;
   width: 100%;
   z-index: 500;
-  transition: 0.4s;
+  transition: 0.1s;
   &.hidden {
     opacity: 0;
+  }
+  &.show-bg {
+    background: $cl-bg;
   }
   &.rp-md {
     padding: 15px 20px;
@@ -50,7 +53,6 @@
 
 .drawer-nav-mobile {
   .nav {
-    margin-bottom: auto;
     width: 70vw;
     padding: 0 10px;
   }
@@ -69,6 +71,6 @@
   }
   .logo {
     text-align: center;
-    padding-bottom: 20px;
+    margin: 20px 0;
   }
 }
