@@ -1,6 +1,7 @@
 import { Drawer, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import React, { FC, useEffect, useState } from "react";
 import { Menu, Close } from "@mui/icons-material";
+import { SOCIAL_LIST } from "./FooterComponent";
 
 export const NAV_LIST = [
   "Home",
@@ -8,7 +9,6 @@ export const NAV_LIST = [
   "Visions",
   "Partnership",
   "Portfolio",
-  "Social",
   "Contact",
 ];
 
@@ -84,6 +84,18 @@ const DrawerMenu: FC = () => {
               <span>{item}</span>
             </li>
           ))}
+        </ul>
+        <ul className="social">
+          {SOCIAL_LIST.map((item, index) => {
+            const TIcon = item.icon;
+            return (
+              <li key={index}>
+                <a target="_blank" href={item.link}>
+                  <TIcon sx={{ fontSize: 26, color: "#2c2c2c" }} />
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </Drawer>
       <IconButton

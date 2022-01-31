@@ -1,9 +1,26 @@
 import React, { FC } from "react";
-import { Facebook, Twitter, YouTube } from "@mui/icons-material";
+import { Facebook, Twitter, YouTube, Telegram } from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/system";
 
-const SOCIAL_LIST = [Facebook, Twitter, YouTube];
+export const SOCIAL_LIST = [
+  {
+    icon: Facebook,
+    link: "https://www.facebook.com/INV-Ventures-108485651538625",
+  },
+  {
+    icon: Twitter,
+    link: "https://twitter.com/invventures01",
+  },
+  {
+    icon: YouTube,
+    link: "https://www.youtube.com/channel/UCLXKIMq9Eb0T-kCXaFDBxnQ",
+  },
+  {
+    icon: Telegram,
+    link: "https://t.me/inv_community",
+  },
+];
 
 const FooterComponent: FC = () => {
   const theme = useTheme();
@@ -25,14 +42,17 @@ const FooterComponent: FC = () => {
             />
           </div>
           <ul className="social">
-            {SOCIAL_LIST.map((Item, index) => {
-              return (
-                <li key={index}>
-                  <Item sx={{ fontSize: 26 }} />
-                </li>
-              );
-            })}
-          </ul>
+          {SOCIAL_LIST.map((item, index) => {
+            const TIcon = item.icon;
+            return (
+              <li key={index}>
+                <a target="_blank" href={item.link}>
+                  <TIcon sx={{ fontSize: 26, color: "#fff" }} />
+                </a>
+              </li>
+            );
+          })}
+        </ul>
         </div>
         <div className="item menu-item">
           <ul className="nav-footer bd-bottom">
